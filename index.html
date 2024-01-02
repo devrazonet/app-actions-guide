@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guia App e Web - Razonet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <style>
+      .btn-active-modal{ min-width:160px; }
+      .unbordered{
+        border-bottom: 0px;
+        border-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="row p-5">
+          <div class="col text-center">
+            <figure class="img-fluid w-auto mb-0"><img src="assets/src/logo-razonet.webp" alt="Razonet"  /></figure>
+          </div>
+        </div>
+      </header>
+
+
+      <div class="row">
+        <div class="col">
+          <nav class="nav btn-group" aria-label="Formas de pagamento" id="tab_payments" role="tablist">
+            <button type="button" class="btn btn-primary active" id="nav-app-tab" data-bs-toggle="tab" href="#nav-app" role="tab" aria-controls="nav-app" aria-selected="true">Guia do App</button>
+            <button type="button" class="btn btn-primary " id="nav-panel-tab" data-bs-toggle="tab" href="#nav-panel" role="tab" aria-controls="nav-panel" aria-selected="false" tabindex="-1">Guia Painel Web</button>
+          </nav>
+
+          <div class="tab-content mt-5" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-app" role="tabpanel" aria-labelledby="nav-app-tab" tabindex="0">
+              
+              <!-- Menu Início -->
+              <div class="row mb-5">
+                <div class="col">
+                  <h1 class="text-primary h5  justify-content-center"><i class="bi bi-house-door-fill"></i> INÍCIO</h1>
+                  
+                  <table class="table table-hover">
+                    <thead class="bg-light">
+                      <tr>
+                        <th scope="col">Ação</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Prints</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Resultado do mês</th>
+                        <td>Mostra graficos dos faturamentos mensais</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/home/resultados_mes.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Impostos a pagar</th>
+                        <td>Mostra os valores de impostos em aberto</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/home/impostos_pagar.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Contabilidade</th>
+                        <td>Atalho para Menu <a href="#contabilidade">Contabilidade</a>.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/home/contabilidade.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Gestão de pessoas</th>
+                        <td>Atalho para o Menu <a href="#pessoas">Gestão de pessoas</a>.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/home/gestao_de_pessoas.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Notas fiscais</th>
+                        <td>Atalho para o Menu <a href="#notasfiscais">Notas fiscais</a>.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/home/notas_fiscais.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Documentos</th>
+                        <td>Nesse botão há sub abas em que podem ser anexados diversos documentos:</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/home/documentos.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Razonet Bank</th>
+                        <td>Se o cliente clicar nesse campo ele é direcionado para uma conversa Whatsapp do setor Bank.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/home/razonet_bank.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Últimas Notícias</th>
+                        <td>Esse local mostra os ultimos informativos postados:</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/home/noticias.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                
+                </div>
+              </div>
+
+              <!-- Menu Notas Fiscais -->
+              <div class="row mb-5" id="notasfiscais">
+                <div class="col">
+                  <h1 class="text-primary h5"><i class="bi bi-file-earmark-check"></i> NOTAS FISCAIS</h1>
+                  
+                  <table class="table table-hover">
+                    <thead class="bg-light">
+                      <tr>
+                        <th scope="col">Ação</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Prints</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Emitir NF-E</th>
+                        <td>Depois da liberação para emissão de notas o cliente pode emitir <strong>notas de comércio</strong> clicando nesse botão.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/notas/emitir_nfe.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Emitir NFS-E</th>
+                        <td>Depois da liberação para emissão de notas o cliente pode emitir <strong>notas de serviço</strong> clicando nesse botão.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/notas/emitir_nfse.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Emitir Devolução</th>
+                        <td>Depois da liberação para emissão de notas o cliente pode emitir <strong>notas de devolução</strong> clicando nesse botão.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/notas/emitir_devolucao.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Clientes</th>
+                        <td>Clicando nesse botão o cliente pode visualizar os cadastros de seus clientes e realizar novos cadastros.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/notas/clientes.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Minha Tributação</th>
+                        <td>Nesse local são criadas e visualizadas as tributações a serem usadas na emissão de <strong>notas de comércio</strong>.<br /><i>(Notas de serviço não utilizam tributações)</i></td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/notas/minha_tributacao.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Produtos</th>
+                        <td>Nesse local são cadastrados e visualizados os produtos a serem usados na emissão de <strong>notas de comércio</strong>.<br /><i>(Notas de serviço não utilizam produtos)</i> </td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/notas/produtos.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Transportadoras</th>
+                        <td>Nesse local são cadastradas e visualizadas as transportadoras a serem usadas na emissão de <strong>notas de comércio</strong>.<br /><i>(Notas de serviço não utilizam transportadoras)</i></td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/notas/transportadoras.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Listar notas</th>
+                        <td>Nesse local são listadas as notas <strong>Emitidas</strong> ou <strong>Canceladas</strong>.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/notas/listar_notas.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">ADD Observações</th>
+                        <td>Nesse local é configurada a observação padrão que irá aparecer em todas as emissões de notas.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/notas/observacoes.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                
+                </div>
+              </div>
+
+
+              <!-- Menu Pessoas -->
+              <div class="row mb-5" id="pessoas">
+                <div class="col">
+                  <h1 class="text-primary h5"><i class="bi bi-person-heart"></i> PESSOAS</h1>
+                  
+                  <table class="table table-hover">
+                    <thead class="bg-light">
+                      <tr>
+                        <th scope="col">Ação</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Prints</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Colaboradores</th>
+                        <td>Clicando nesse botão o cliente pode verificar os funcionários ativos, também é possível realizar o cadastro de um novo colaborador</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/pessoas/colaboradores.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Lançamentos da folha</th>
+                        <td>Nesse local o cliente pode realizar os lançamentos de variaveis da folha de pagamento (caso possua).
+                          <br />
+                          <strong>Exemplos</strong>: Horas extras, comissão, etc.
+                          <br />Também é possível visualizar os dados já lançados.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/pessoas/lancamentos_folhas.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Férias</th>
+                        <td>Clicando nesse botão o cliente pode visualizar as férias dos colaboradores e solicitar novas férias.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/pessoas/ferias.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Afastamentos</th>
+                        <td>Clicando nesse botão o cliente pode visualizar os afastamentos dos colaboradores e solicitar novos afastamentos</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/pessoas/afastamentos.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Alteração Salarial</th>
+                        <td>Quando o empregado possui uma alteração salarial, o nosso cliente solicita a alteração salarial por esse campo.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/pessoas/alteracao_salarial.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Demissões</th>
+                        <td>Quando o colaborador vai ser demitido é necessário fazer a solicitação da demissão por esse local.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/pessoas/demissoes.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Jornadas</th>
+                        <td>Nesse local é possível realizar o cadastro os horário semanais em que os colaboradores vão trabalhar (Essas jornadas podem ser aplicadas no cadastro de um novo empregado).</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/pessoas/jornadas.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Documentos</th>
+                        <td>Nesse local o cliente encontrará todos os documentos anexados no cadastro do empregado.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/pessoas/documentos.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                
+                </div>
+              </div>
+
+
+              <!-- Menu Contabilidade -->
+              <div class="row mb-5" id="contabilidade">
+                <div class="col">
+                  <h1 class="text-primary h5"><i class="bi bi-coin"></i> CONTABILIDADE</h1>
+                  
+                  <table class="table table-hover caption-top">
+                    <caption>
+                      Dentro do Menu Contabilidade o cliente consegue verificar um gráfico de seu faturamento mensal e acompanhar o andamento de seu faturamento em relação ao regime enquadrado.
+                      <br />
+                      <button type="button" class="btn btn-secondary btn-active-modal mt-2 mb-4" rel="assets/src/contabilidade/graficos_contabilidade.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button>
+                    </caption>
+                    
+                    <thead class="bg-light">
+                      <tr>
+                        <th scope="col">Ação</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Prints</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row"><span id="despesas">Despesas</span></th>
+                        <td>Ao clicar nesse botão é possível visualizar gráficos com as despesas já lançadas, filtrar por mês e também realizar o cadastro de uma <strong>nova despesa</strong> ou a importação de um <strong>extrato .OFX</strong>, além da <strong>edição e visualização</strong> das despesas já lançadas.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/contabilidade/despesas.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Faturamento</th>
+                        <td>Ao clicar nesse campo é possível realizar o <strong>lançamento</strong> do faturamento, além da <strong>edição e visualização</strong> dos faturamentos já lançados</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/contabilidade/faturamento.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Relatórios</th>
+                        <td>Ao clicar neste botão, é possível gerar relatórios de:
+                          <br />
+                          <strong>Faturamento, Despesas e Resultados</strong>.
+                        </td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/contabilidade/relatorios.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Extratos</th>
+                        <td>Ao clicar nesse botão é possível visualizar os extratos OFX lançados no botão <a href="#despesas">Despesas</a>.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/contabilidade/extratos.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Demonstrações</th>
+                        <td>Ao clicar nesse botão é possível visualizar os demonstrativos contabeis lançados.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/contabilidade/demonstracoes.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">CND</th>
+                        <td>Ao clicar nesse botão é possível visualizar os links para a emissão de CND’s.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/contabilidade/cnd.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Tributos</th>
+                        <td>Ao clicar nesse botão o cliente vai ver os <strong>impostos</strong> em aberto e também poderá realizar o <strong>pagamento</strong> dos mesmos.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/contabilidade/tributos.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Investimentos</th>
+                        <td>Ao clicar nesse botão o cliente poderá visualizar os lançamentos de investimentos feitos na empresa e também fazer o lançamento de novos investimentos</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/contabilidade/investimentos.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                
+                </div>
+              </div>
+
+
+              <!-- Menu MENU -->
+              <div class="row mb-5">
+                <div class="col">
+                  <h1 class="text-primary h5"><i class="bi bi-sliders"></i> MENU</h1>
+                  
+                  <table class="table table-hover caption-top">
+                    <caption>
+                      Ao clicar na logo da empresa é possível alterar a imagem logo da empresa. Ao clicar no nome da empresa o cliente pode realizar a alteração a capa que aparece na tela inicial.
+                      <br />
+                      <button type="button" class="btn btn-secondary btn-active-modal mt-2 mb-4" rel="assets/src/menu/menu_menu.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button>
+                    </caption>
+                    
+                    <thead class="bg-light">
+                      <tr>
+                        <th scope="col">Ação</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Prints</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row"><span id="despesas">Honorários</span></th>
+                        <td>Ao clicar nesse campo o cliente pode realizar o pagamento da mensalidade Razonet.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/menu/honorarios.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Parceiros</th>
+                        <td>Ao clicar nesse botão o cliente irá visualizar informações sobre nossos parceiros.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/menu/parceiros.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Universidade Razonet</th>
+                        <td>Ao clicar nesse botão o cliente tem acesso a conteudos referentes a <strong>contabilidade / nosso time / relatos de clientes</strong>.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/menu/universidade_razonet.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Indique um amigo</th>
+                        <td>Ao clicar no botão o cliente pode indicar amigos para se tornarem clientes, também é possível visualizar a lista de indicados.</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/menu/indique_um_amigo.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+
+                      <tr class="unbordered">
+                        <th scope="row">Configurações</th>
+                        <td>Ao clicar nesse botão é possível acessar as seguintes configurações:</td>
+                        <td><button type="button" class="btn btn-secondary btn-active-modal float-end" rel="assets/src/menu/configuracoes.jpg" data-bs-toggle="modal" data-bs-target="#modal_attach">Abrir Anexo</button></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td colspan="2">
+                          <ul class="list-group list-group-flush mt-2">
+                            <li class="list-group-item">
+                              <strong>Meus Dados</strong>: 
+                              Ao clicar nesse botão o cliente visualiza as informações basicas da empresa e do sócio
+                            </li>
+                            <li class="list-group-item">
+                              <strong>Trocar senha</strong>: 
+                              A clicar nesse local é possível realizar a alteração da senha de acesso ao app.
+                            </li>
+                            <li class="list-group-item">
+                              <strong>Minhas empresas</strong>: 
+                              Ao clicar nesse botão é possível realizar a alteração de empresa, caso o cliente possua mais de uma ou filiais
+                            </li>
+                            <li class="list-group-item">
+                              <strong>Meus cartões de crédito</strong>: 
+                              Ao clicar nesse botão é possível cadastrar ou apagar cartões de crédito
+                            </li>
+                            <li class="list-group-item">
+                              <strong>Quero cancelar minha Razonet</strong>: 
+                              Ao clicar nesse botão o cliente pode realizar o cancelamento dos serviços da Razonet
+                            </li>
+                            <li class="list-group-item">
+                              <strong>Notificações</strong>: 
+                              Ao clicar nesse botão o cliente visualiza notificações gerais de pagamentos, cadastros de despesas, cadastros de demissões, etc
+                            </li>
+                            <li class="list-group-item">
+                              <strong>Termos de uso</strong>: 
+                              Ao clicar nesse campo o cliente é direcionado ao site da Razonet, onde contém os termos de uso do aplicativo
+                            </li>
+                            <li class="list-group-item">
+                              <strong>Política de privacidade</strong>: 
+                              Ao clicar nesse campo o cliente é direcionado ao site da Razonet, onde contém a politica de privacidade dos nossos serviços.
+                            </li>
+                            <li class="list-group-item">
+                              <strong>Avalie a Razonet na loja</strong>: 
+                              Ao clicar nesse botão o cliente é direcionado a loja de aplicativos para realizar a avaliação do nosso app (AppleStore / Google Play Store)
+                            </li>
+                            <li class="list-group-item">
+                              <strong>Sair</strong>: 
+                              Ao clicar nesse botão o cliente será deslogado da conta e será direcionado a tela de login
+                            </li>
+
+                          </ul>
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="3" class="text-center">
+                          <span class="h6 text-primary py-3 d-block mt-0"><i class="bi bi-exclamation-triangle-fill text-warning"></i>&nbsp;&nbsp;Ainda em configurações, também está acessível a versão do aplicativo, bem como notificação de quando há uma nova atualização.</span>                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                </div>
+              </div>
+
+            </div>
+            <div class="tab-pane fade" id="nav-panel" role="tabpanel" aria-labelledby="nav-panel-tab" tabindex="0">
+              <span class="lead text-center d-grid mt-3 text-danger">As opções para o painel web ainda não estão liberadas.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <span class="lead mx-auto text-center fs-6 mt-5 mb-4">&copy; 2022 Razonet Contabilidade</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal fade" id="modal_attach" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="" id="destiny_img" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END MODAL -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script>
+      let destiny = document.querySelector("#destiny_img");
+      
+      document.querySelectorAll(".btn-active-modal").forEach( function(button) {
+        button.addEventListener("click", function(event) {
+          const source = button.getAttribute("rel");
+          destiny.setAttribute("src", source);
+        });
+      });
+    </script>
+  </body>
+</html>
